@@ -5,6 +5,7 @@ Pulls the latest battle data
 '''
 
 from datetime import date
+from datetime import timedelta
 import requests
 import os
 import pandas as pd
@@ -19,15 +20,9 @@ import time
 Driver of the script
 '''
 def main():
-    print('TESTING GET MISSING BATTLE IDS:')
-    print(get_missing_battle_ids())
-    print()
-    print('TESTING GET MISSING SALMON RUN IDS:')
-    print(get_missing_salmon_run_ids())
-    print()
-    print('TESTING GETTING LATEST WORLDWIDE DATA:')
+    download_my_battle_data()
+    get_missing_salmon_run_data()
     get_worldwide_data()
-    print('check the worldwide directory and search for today date')
 
 
 '''
@@ -37,12 +32,15 @@ Returns: The username, password, and api_key
 that are stored in the secrets.json file
 '''
 def get_secrets():
-    with open('secrets.json') as f:
-        secrets = json.load(f)
+    # with open('secrets.json') as f:
+    #     secrets = json.load(f)
     
-    username = secrets['USERNAME']
-    password = secrets['PASSWORD']
-    api_key = secrets['API_KEY']
+    # username = secrets['USERNAME']
+    # password = secrets['PASSWORD']
+    # api_key = secrets['API_KEY']
+    username = os.environ.get("USERNAME")
+    password = os.environ.get("PASSWORD")
+    api_key = os.environ.get("API_KEY")
 
     return username, password, api_key
 
@@ -54,6 +52,15 @@ Returns: Today's date in YYYY-MM-DD format
 '''
 def get_today_date():
     return str(date.today())
+
+
+'''
+Helper function that returns yesterday's date
+
+Returns: Today's date in YYYY-MM-DD format
+'''
+def get_yesterday_date():
+    return str(date.today() - timedelta(days=1))
 
 
 '''
@@ -185,7 +192,7 @@ def get_missing_salmon_run_ids():
 Function that finds the lastest worldwide csv file and downloads it
 '''
 def get_worldwide_data():
-    today = get_today_date()
+    today = get_yesterday_date()
     filename = today + '.csv'
     url = 'https://dl-stats.stat.ink/splatoon-3/battle-results-csv/'
     url += (today[:4] + '/' + today[5:7] + '/' + filename)
