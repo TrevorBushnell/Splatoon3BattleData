@@ -184,7 +184,7 @@ def get_missing_salmon_run_ids():
     url = 'https://stat.ink/api/v3/salmon/uuid-list'
     header = {'Authorization': 'Bearer ' + api_key}
     json_ids = json.loads(requests.get(url=url, headers=header).text)
-    csv_ids = pd.read_csv('./data/statink-super64guy-salmonrun.csv')['id'].tolist()
+    csv_ids = pd.read_csv('./data/statink-super64guy-salmonrun.csv')['uuid'].tolist()
     return list(set(json_ids) - set(csv_ids))
 
 
