@@ -81,6 +81,6 @@ with open("./data/statink-super64guy.json") as f:
         df = pd.concat([df, tmp_df])
 
 print(df.head)
-df.to_csv('./data/statink-super64guy-battle.csv', index=False)
+df.to_csv('./data/statink-super64guy.csv', index=False)
 time.sleep(3)
 os.remove('./data/statink-super64guy.json')

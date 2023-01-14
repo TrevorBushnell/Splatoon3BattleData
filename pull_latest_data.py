@@ -44,6 +44,18 @@ def get_secrets():
 
     return username, password, api_key
 
+'''
+Import the secret variables from a json file (used for testing)
+'''
+def get_json_secrets():
+    with open('secrets.json') as f:
+        secrets = json.load(f)
+
+    username = secrets['USERNAME']
+    password = secrets['PASSWORD']
+    api_key = secrets['API_KEY']
+
+    return username, password, api_key
 
 '''
 Helper function that returns today's date
@@ -71,6 +83,8 @@ battle data, then appends the results to
 def download_my_battle_data():
     # get the secret values
     username, password, api_key = get_secrets()
+    if api_key == None:
+        username, password, api_key = get_json_secrets()
 
     # initialize the web driver
     chrome_options = Options()
@@ -138,8 +152,6 @@ def download_my_battle_data():
     os.remove('./data/statink-super64guy.json')
 
 
-
-
 '''
 Function that finds the battle_ids that are not already gathered
 
@@ -165,11 +177,14 @@ def get_missing_salmon_run_data():
 
     df = pd.read_csv('./data/statink-super64guy-salmonrun.csv')
 
-    for i in ids:
-        url = 'https://stat.ink/api/v3/salmon/' + i
-        r = requests.get(url=url)
-        tmp_df = pd.DataFrame.from_dict(json.loads(r.text), orient="index").T
-        df = pd.concat([df, tmp_df])
+    url = 'https://stat.ink/@super64guy/salmon3.json'
+    r = requests.get(url=url)
+    json_data = json.loads(r.text)
+
+    for obj in json_data:
+        if obj['uuid'] in ids:
+            tmp_df = pd.DataFrame.from_dict(obj, orient="index").T
+            df = pd.concat([df, tmp_df])
 
     df.to_csv('./data/statink-super64guy-salmonrun.csv') 
 
@@ -181,6 +196,8 @@ Returns: list of ids for salmon run jobs that are not already in my csv file
 '''
 def get_missing_salmon_run_ids():
     username, password, api_key = get_secrets()
+    if api_key == None:
+        username, password, api_key = get_json_secrets()
     url = 'https://stat.ink/api/v3/salmon/uuid-list'
     header = {'Authorization': 'Bearer ' + api_key}
     json_ids = json.loads(requests.get(url=url, headers=header).text)
