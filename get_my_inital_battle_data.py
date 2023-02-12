@@ -78,9 +78,10 @@ with open("./data/statink-super64guy.json") as f:
     for json_obj in f:
         data = json.loads(json_obj)
         tmp_df = pd.DataFrame.from_dict(data, orient="index").T
+        tmp_df.set_index('id', inplace=True)
         df = pd.concat([df, tmp_df])
 
 print(df.head)
-df.to_csv('./data/statink-super64guy.csv', index=False)
+df.to_csv('./data/statink-super64guy.csv', index=True)
 time.sleep(3)
 os.remove('./data/statink-super64guy.json')

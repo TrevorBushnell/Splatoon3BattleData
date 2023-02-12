@@ -146,6 +146,7 @@ def download_my_battle_data():
         r = requests.get(url=url)
         json_obj = json.loads(r.text)
         tmp_df = pd.DataFrame.from_dict(json_obj, orient="index").T
+        tmp_df.set_index('id', inplace=True)
         df = pd.concat([df, tmp_df])
 
     df.to_csv('./data/statink-super64guy.csv')
@@ -184,6 +185,7 @@ def get_missing_salmon_run_data():
     for obj in json_data:
         if obj['uuid'] in ids:
             tmp_df = pd.DataFrame.from_dict(obj, orient="index").T
+            tmp_df.set_index('id', inplace=True)
             df = pd.concat([df, tmp_df])
 
     df.to_csv('./data/statink-super64guy-salmonrun.csv') 

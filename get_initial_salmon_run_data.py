@@ -25,7 +25,8 @@ df = pd.DataFrame()
 
 for obj in json_obj:
     tmp_df = pd.DataFrame.from_dict(obj, orient="index").T
+    tmp_df.set_index('id', inplace=True)
     df = pd.concat([df, tmp_df])
 
 print(df.head(5))
-df.to_csv('./data/statink-super64guy-salmonrun.csv', index=False)
+df.to_csv('./data/statink-super64guy-salmonrun.csv', index=True)
