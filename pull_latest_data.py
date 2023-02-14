@@ -138,7 +138,7 @@ def download_my_battle_data():
     os.chdir(current_dir)
 
     # get the missing battle ids and add them to the csv file
-    df = pd.read_csv('./data/statink-super64guy.csv')
+    df = pd.read_csv('./data/statink-super64guy.csv', index_col='id')
     ids = get_missing_battle_ids()
 
     for i in ids:
@@ -176,7 +176,7 @@ Function that gathers the latest salmon run data and updates it
 def get_missing_salmon_run_data():
     ids = get_missing_salmon_run_ids()
 
-    df = pd.read_csv('./data/statink-super64guy-salmonrun.csv')
+    df = pd.read_csv('./data/statink-super64guy-salmonrun.csv', index_col='id')
 
     url = 'https://stat.ink/@super64guy/salmon3.json'
     r = requests.get(url=url)
