@@ -1,4 +1,4 @@
-# CPSC325: Project Proposal
+# CPSC325: Research Proposal
 
 ## 1: General Topic Areas
 
