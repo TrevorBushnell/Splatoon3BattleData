@@ -1,3 +1,6 @@
 pandas
 requests
 selenium
+matplotlib
+numpy
+seaborn
