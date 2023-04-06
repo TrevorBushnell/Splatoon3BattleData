@@ -1,0 +1,14 @@
+START AT: {'time': 1662699224, 'iso8601': '2022-09-09T04:53:44+00:00'}
+
+END AT: {'time': 1662699524, 'iso8601': '2022-09-09T04:58:44+00:00'}
+
+PERIOD: {'period': 230930, 'from': '2022-09-09T04:00:00+00:00', 'to': '2022-09-09T06:00:00+00:00'}
+
+CREATED AT: {'time': 1673063399, 'iso8601': '2023-01-07T03:49:59+00:00'}
+
+GAME_VERSION: {'tag': '3.0.0', 'name': {'en_US': 'v3.0.0', 'ja_JP': 'v3.0.0'}, 'release_at': {'time': 1677546000, 'iso8601': '2023-02-28T01:00:00+00:00'}}
+
+RANK BEFORE {'key': 'c-', 'name': {'en_US': 'C-', 'ja_JP': 'C-'}}
+
+WEAPON {'key': 'prime', 'aliases': ['splattershot_pro', '70'], 'type': {'key': 'shooter', 'aliases': [], 'name': {'en_US': 'Shooters', 'ja_JP': 'シューター'}}, 'name': {'en_US': 'Splattershot Pro', 'ja_JP': 'プライムシューター'}, 'main': 'prime', 'sub': {'key': 'linemarker', 'aliases': [], 'name': {'en_US': 'Angle Shooter', 'ja_JP': 'ラインマーカー'}}, 'special': {'key': 'kanitank', 'aliases': [], 'name': {'en_US': 'Crab Tank', 'ja_JP': 'カニタンク'}}, 'reskin_of': 'prime'}
+
