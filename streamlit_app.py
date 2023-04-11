@@ -31,7 +31,7 @@ general_options = st.selectbox(label='General_Info_Type', options=['General', 'G
 
 if general_options == 'General':
     st.write("**TOTAL BATTLES:**", total_battles)
-    st.write("**WIN %:**", win_percent)
+    st.write("**WIN %:**", win_percent * 100)
     st.write("**AVERAGE KILLS:**", avg_kills)
     st.write("**AVERAGE DEATHS:**", avg_deaths)
     st.write("**AVERAGE KD RATIO:**", avg_kd)
@@ -58,9 +58,36 @@ if position_options == 'General':
     st.bar_chart(data=battle_df['rank_in_team'].value_counts())
 
 elif position_options == 'Game Mode Specific':
-    mode_options = st.selectbox(label='Game_Mode_General', options=set(battle_df['rule'].to_list()))
+    mode_options = st.selectbox(label='Game_Mode_Position', options=set(battle_df['rule'].to_list()))
     st.bar_chart(data=utils.generate_position_values(battle_df, 'rule', mode_options))
 
 elif position_options == 'Weapon Specific':
-    weapon_options = st.selectbox(label='Weapon_General', options=set(battle_df['main_weapon'].to_list()))
+    weapon_options = st.selectbox(label='Weapon_Position', options=set(battle_df['main_weapon'].to_list()))
     st.bar_chart(data=utils.generate_position_values(battle_df, 'main_weapon', weapon_options))
+
+st.write("""
+## Turf Inked Per Weapon
+""")
+
+turf_inked_options = st.selectbox(label='Select Option for Turf Inked', options=['Over all Game Modes', 'Over Specific Game Mode'])
+
+if turf_inked_options == 'Over all Game Modes':
+    st.bar_chart(data=utils.plot_turf_inked_per_weapon(battle_df))
+
+elif turf_inked_options == 'Over Specific Game Mode':
+    game_options = st.selectbox(label='Select Game Mode', options=set(battle_df['rule'].to_list()))
+    st.bar_chart(data=utils.plot_turf_inked_per_weapon(battle_df, game_mode=game_options))
+
+
+st.write("""
+## Average Win Rate Per Stage
+
+**TO BE IMMPLEMENTED:** Do this on a general game basis and a per-game mode basis
+""")
+
+
+st.write("""
+## Average Turf Inked Per Stage
+
+**TO BE IMPLEMENTED:** There shouldn't be any additional options with this one
+""")

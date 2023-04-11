@@ -12,3 +12,41 @@ RANK BEFORE {'key': 'c-', 'name': {'en_US': 'C-', 'ja_JP': 'C-'}}
 
 WEAPON {'key': 'prime', 'aliases': ['splattershot_pro', '70'], 'type': {'key': 'shooter', 'aliases': [], 'name': {'en_US': 'Shooters', 'ja_JP': 'シューター'}}, 'name': {'en_US': 'Splattershot Pro', 'ja_JP': 'プライムシューター'}, 'main': 'prime', 'sub': {'key': 'linemarker', 'aliases': [], 'name': {'en_US': 'Angle Shooter', 'ja_JP': 'ラインマーカー'}}, 'special': {'key': 'kanitank', 'aliases': [], 'name': {'en_US': 'Crab Tank', 'ja_JP': 'カニタンク'}}, 'reskin_of': 'prime'}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SALMON RUN:
+
+TITLE BEFORE: {'key': 'profreshional_3', 'aliases': ['7'], 'name': {'en_US': 'Profreshional +3', 'ja_JP': 'たつじん＋３'}}
+
+TITLE AFTER: {'key': 'profreshional_3', 'aliases': ['7'], 'name': {'en_US': 'Profreshional +3', 'ja_JP': 'たつじん＋３'}}
+
+WAVES: [{'tide': {'key': 'normal', 'name': {'en_US': 'Mid Tide', 'ja_JP': '普通'}}, 'event': None, 'golden_quota': 13, 'golden_delivered': 18, 'golden_appearances': 21, 'special_uses': []}, {'tide': {'key': 'normal', 'name': {'en_US': 'Mid Tide', 'ja_JP': '普通'}}, 'event': None, 'golden_quota': 14, 'golden_delivered': 12, 'golden_appearances': 18, 'special_uses': {'jetpack': {'special': {'key': 'jetpack', 'aliases': [], 'name': {'en_US': 'Inkjet', 'ja_JP': 'ジェットパック'}}, 'count': 1}}}]
+
+BOSSES: {'bakudan': {'boss': {'key': 'bakudan', 'aliases': ['steelhead', '4'], 'name': {'en_US': 'Steelhead', 'ja_JP': 'バクダン'}}, 'appearances': 1, 'defeated': 0, 'defeated_by_me': 0}, 'diver': {'boss': {'key': 'diver', 'aliases': ['flipper_flopper', '12'], 'name': {'en_US': 'Flipper-Flopper', 'ja_JP': 'ダイバー'}}, 'appearances': 1, 'defeated': 1, 'defeated_by_me': 0}, 'hashira': {'boss': {'key': 'hashira', 'aliases': ['fish_stick', '11'], 'name': {'en_US': 'Fish Stick', 'ja_JP': 'ハシラ'}}, 'appearances': 2, 'defeated': 2, 'defeated_by_me': 0}, 'hebi': {'boss': {'key': 'hebi', 'aliases': ['steel_eel', '7'], 'name': {'en_US': 'Steel Eel', 'ja_JP': 'ヘビ'}}, 'appearances': 2, 'defeated': 1, 'defeated_by_me': 0}, 'koumori': {'boss': {'key': 'koumori', 'aliases': ['drizzler', '10'], 'name': {'en_US': 'Drizzler', 'ja_JP': 'コウモリ'}}, 'appearances': 3, 'defeated': 2, 'defeated_by_me': 0}, 'mogura': {'boss': {'key': 'mogura', 'aliases': ['maws', '9'], 'name': {'en_US': 'Maws', 'ja_JP': 'モグラ'}}, 'appearances': 3, 'defeated': 1, 'defeated_by_me': 0}, 'nabebuta': {'boss': {'key': 'nabebuta', 'aliases': ['slammin_lid', '14'], 'name': {'en_US': "Slammin' Lid", 'ja_JP': 'ナベブタ'}}, 'appearances': 3, 'defeated': 2, 'defeated_by_me': 0}, 'tekkyu': {'boss': {'key': 'tekkyu', 'aliases': ['big_shot', '13'], 'name': {'en_US': 'Big Shot', 'ja_JP': 'テッキュウ'}}, 'appearances': 2, 'defeated': 2, 'defeated_by_me': 0}, 'teppan': {'boss': {'key': 'teppan', 'aliases': ['scrapper', '6'], 'name': {'en_US': 'Scrapper', 'ja_JP': 'テッパン'}}, 'appearances': 1, 'defeated': 1, 'defeated_by_me': 1}, 'tower': {'boss': {'key': 'tower', 'aliases': ['stinger', '8'], 'name': {'en_US': 'Stinger', 'ja_JP': 'タワー'}}, 'appearances': 2, 'defeated': 1, 'defeated_by_me': 0}}
+
+FAIL REASON: {'key': 'wipe_out', 'name': {'en_US': 'Wipe out', 'ja_JP': '全滅'}}
+
+STAGE: {'key': 'amabi', 'aliases': ['academy', 'ama', 'inkblot_art_academy', '13', '102'], 'name': {'en_US': 'Inkblot Art Academy', 'ja_JP': '海女美術大学'}, 'short_name': {'en_US': 'Academy', 'ja_JP': '海女美'}, 'area': 2610, 'release_at': {'time': 1662649200, 'iso8601': '2022-09-08T15:00:00+00:00'}}
+
+KING SALMONID: {'key': 'tatsu', 'aliases': ['horrorboros', '24'], 'name': {'en_US': 'Horrorboros', 'ja_JP': 'タツ'}}

@@ -15,7 +15,7 @@ def generate_general_info(df, col_name, attribute):
     avg_inked = new_df['inked'].mean()
 
     st.write("**TOTAL BATTLES:**", total_battles)
-    st.write("**WIN %:**", win_percent)
+    st.write("**WIN %:**", win_percent * 100)
     st.write("**AVERAGE KILLS:**", avg_kills)
     st.write("**AVERAGE DEATHS:**", avg_deaths)
     st.write("**AVERAGE KD RATIO:**", avg_kd)
@@ -24,4 +24,25 @@ def generate_general_info(df, col_name, attribute):
     st.write("**AVERAGE INKED:**", avg_inked)
 
 def generate_position_values(df, col_name, attribute):
-    return df.groupby(col_name).get_group(attribute)['rank_in_team'].value_counts() 
+    return df.groupby(col_name).get_group(attribute)['rank_in_team'].value_counts()
+
+
+def plot_turf_inked_per_weapon(df, game_mode=None):
+    # setup
+    weapon_dict = {}
+    weapon_list = list(set(df['main_weapon'].to_list()))
+
+    # get a groupby of all the weapons
+    weapon_groups = df.groupby('main_weapon')
+
+    if game_mode == None:
+        for weapon in weapon_list:
+            weapon_df = weapon_groups.get_group(weapon)
+            weapon_dict[weapon] = weapon_df['inked'].mean()
+
+    else:
+        for weapon in weapon_list:
+            weapon_df = weapon_groups.get_group(weapon).groupby('rule').get_group(game_mode)
+            weapon_dict[weapon] = weapon_df['inked'].mean()
+
+    return weapon_dict
