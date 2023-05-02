@@ -48,7 +48,7 @@ elif general_options == 'By Stage':
 st.write("""
 ## Eggs Collected Per Stage
 
-To be implemented - have a selectbox to distinguish between golden eggs and normal power eggs (and maybe compare myself against my other teammates?)
+Golden eggs are needed to win in Splatoon. Power eggs are needed to gain more rewards upon winning.
 """)
          
 eggs_options = st.selectbox(label='Specify Egg Type', options=['Golden Eggs', 'Power Eggs'])
@@ -94,7 +94,7 @@ st.altair_chart(alt.Chart(grouped_data).mark_bar().encode(
 st.write("""
 ## Rescues By Stage
 
-To be implemented - do this overall and per stage
+Rescues is the number of times you revive your teammates.
 """)
 
 grouped_data = salmonrun_df.groupby('stage')['my_rescues'].mean().reset_index()
@@ -111,7 +111,7 @@ st.altair_chart(alt.Chart(grouped_data).mark_bar().encode(
 st.write("""
 ## Revives By Stage
 
-To be implemented - do this overall and per stage
+Revives are the number of times you get revived by your teammates after you die.
 """)
 
 grouped_data = salmonrun_df.groupby('stage')['my_rescued'].mean().reset_index()

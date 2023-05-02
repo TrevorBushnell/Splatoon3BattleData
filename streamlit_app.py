@@ -51,6 +51,8 @@ elif general_options == 'Weapon Specific':
 
 st.write("""
 ## Position in Team
+
+Your rank on your team in a game is dependent on different factors depending on your game mode. In Turf War variants, your position is determined by how much ink your turf. In ranked game modes, your position is determined by your KD ratio.
 """)
 
 position_options = st.selectbox(label='Position_Options', options=['General', 'Game Mode Specific', 'Weapon Specific'])
@@ -69,6 +71,8 @@ elif position_options == 'Weapon Specific':
 
 st.write("""
 ## Turf Inked Per Weapon
+
+This is the amount of turf that I have inked with each weapon in the game. You also turf less in ranked modes usually which is why I give the option to search by game mode.
 """)
 
 turf_inked_options = st.selectbox(label='Select Option for Turf Inked', options=['Over all Game Modes', 'Over Specific Game Mode'])
@@ -102,7 +106,7 @@ elif turf_inked_options == 'Over Specific Game Mode':
 st.write("""
 ## Average Turf Inked Per Stage
 
-**TO BE IMPLEMENTED:** There shouldn't be any additional options with this one
+This is the amount of turf I ink by a given stage. This shows how some stages are bigger/smaller than others.
 """)
 turf_inked_stage_options = st.selectbox(label='Options', options=['General', 'By Game Mode'])
 

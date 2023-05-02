@@ -2,6 +2,8 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
+import requests
+import json
 
 def generate_general_info(df, col_name, attribute):
     new_df = df.groupby(col_name).get_group(attribute)
@@ -50,3 +52,12 @@ def plot_turf_inked_per_weapon(df, game_mode=None):
                 weapon_dict[weapon] = weapon_df['inked'].mean()
 
     return weapon_dict
+
+def get_unique_weapons_list():
+    weapons_list = []
+    weapons_json = json.loads(requests.get('https://stat.ink/api/v3/weapon').text)
+
+    for val in weapons_json:
+        weapons_list.append(val['key'])
+
+    return weapons_list
