@@ -32,17 +32,21 @@ def plot_turf_inked_per_weapon(df, game_mode=None):
     weapon_dict = {}
     weapon_list = list(set(df['main_weapon'].to_list()))
 
-    # get a groupby of all the weapons
-    weapon_groups = df.groupby('main_weapon')
+    
 
     if game_mode == None:
+        # get a groupby of all the weapons
+        weapon_groups = df.groupby('main_weapon')
         for weapon in weapon_list:
             weapon_df = weapon_groups.get_group(weapon)
             weapon_dict[weapon] = weapon_df['inked'].mean()
 
     else:
         for weapon in weapon_list:
-            weapon_df = weapon_groups.get_group(weapon).groupby('rule').get_group(game_mode)
-            weapon_dict[weapon] = weapon_df['inked'].mean()
+            tmp_df = df.groupby('rule').get_group(game_mode)
+            weapon_groups = tmp_df.groupby('main_weapon')
+            for weapon in weapon_list:
+                weapon_df = weapon_groups.get_group(weapon)
+                weapon_dict[weapon] = weapon_df['inked'].mean()
 
     return weapon_dict

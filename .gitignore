@@ -130,3 +130,4 @@ dmypy.json
 
 # other files I don't want read
 secrets.json
+credentials.json

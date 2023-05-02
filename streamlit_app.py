@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import utils
+import altair as alt
 
 
 # read in the data
@@ -63,6 +64,7 @@ elif position_options == 'Game Mode Specific':
 
 elif position_options == 'Weapon Specific':
     weapon_options = st.selectbox(label='Weapon_Position', options=set(battle_df['main_weapon'].to_list()))
+    
     st.bar_chart(data=utils.generate_position_values(battle_df, 'main_weapon', weapon_options))
 
 st.write("""
@@ -76,14 +78,25 @@ if turf_inked_options == 'Over all Game Modes':
 
 elif turf_inked_options == 'Over Specific Game Mode':
     game_options = st.selectbox(label='Select Game Mode', options=set(battle_df['rule'].to_list()))
-    st.bar_chart(data=utils.plot_turf_inked_per_weapon(battle_df, game_mode=game_options))
+    
+    grouped_df = battle_df.groupby('rule').get_group(game_options)
+
+    grouped_data = grouped_df.groupby('main_weapon')['inked'].mean().reset_index()
+    st.altair_chart(alt.Chart(grouped_data).mark_bar().encode(
+    x=alt.X('main_weapon:N', title='Weapon'),
+    y=alt.Y('inked:Q', title='Average Turf Inked')
+    ).properties(
+        width=400,
+        height=400
+    )) 
 
 
-st.write("""
-## Average Win Rate Per Stage
+# st.write("""
+# ## Average Win Rate Per Stage
 
-**TO BE IMMPLEMENTED:** Do this on a general game basis and a per-game mode basis
-""")
+# **TO BE IMMPLEMENTED:** Do this on a general game basis and a per-game mode basis
+# """)
+
 
 
 st.write("""
@@ -91,3 +104,28 @@ st.write("""
 
 **TO BE IMPLEMENTED:** There shouldn't be any additional options with this one
 """)
+turf_inked_stage_options = st.selectbox(label='Options', options=['General', 'By Game Mode'])
+
+if turf_inked_stage_options == 'General':
+    grouped_data = battle_df.groupby('stage')['inked'].mean().reset_index()
+    st.altair_chart(alt.Chart(grouped_data).mark_bar().encode(
+    x=alt.X('stage:N', title='Stage'),
+    y=alt.Y('inked:Q', title='Average Turf Inked')
+    ).properties(
+        width=400,
+        height=400
+    )) 
+
+elif turf_inked_stage_options == 'By Game Mode':
+    game_options = st.selectbox(label='Select Game Mode', options=set(battle_df['rule'].to_list()))
+
+    grouped_df = battle_df.groupby('rule').get_group(game_options)
+
+    grouped_data = grouped_df.groupby('stage')['inked'].mean().reset_index()
+    st.altair_chart(alt.Chart(grouped_data).mark_bar().encode(
+    x=alt.X('stage:N', title='Stage'),
+    y=alt.Y('inked:Q', title='Average Turf Inked')
+    ).properties(
+        width=400,
+        height=400
+    )) 

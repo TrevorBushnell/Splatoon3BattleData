@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import utils
+import altair as alt
 
 salmonrun_df = pd.read_csv('./initial_scripts/test_salmon.csv', index_col='id')
 
@@ -49,24 +50,75 @@ st.write("""
 
 To be implemented - have a selectbox to distinguish between golden eggs and normal power eggs (and maybe compare myself against my other teammates?)
 """)
+         
+eggs_options = st.selectbox(label='Specify Egg Type', options=['Golden Eggs', 'Power Eggs'])
+
+if eggs_options == 'Golden Eggs':
+    grouped_data = salmonrun_df.groupby('stage')['my_golden_eggs'].mean().reset_index()
+    st.altair_chart(alt.Chart(grouped_data).mark_bar().encode(
+        x=alt.X('stage:N', title='Stage'),
+        y=alt.Y('my_golden_eggs:Q', title='Golden Eggs Aquired')
+    ).properties(
+        width=400,
+        height=400
+    ))
+
+elif eggs_options == 'Power Eggs':
+    grouped_data = salmonrun_df.groupby('stage')['my_power_eggs'].mean().reset_index()
+    st.altair_chart(alt.Chart(grouped_data).mark_bar().encode(
+        x=alt.X('stage:N', title='Stage'),
+        y=alt.Y('my_power_eggs:Q', title='Power Eggs Aquired')
+    ).properties(
+        width=400,
+        height=400
+    ))
 
 # Average Bosses Killed
 st.write("""
-## Average Bosses Killed
+## Average Bosses Killed Per Stage
 
 To be implemented - will be done overall and by stage (maybe compare against my other teammates?)
 """)
 
+grouped_data = salmonrun_df.groupby('stage')['my_boss_kills'].mean().reset_index()
+st.altair_chart(alt.Chart(grouped_data).mark_bar().encode(
+    x=alt.X('stage:N', title='Stage'),
+    y=alt.Y('my_boss_kills:Q', title='Golden Eggs Saved')
+).properties(
+    width=400,
+    height=400
+))
+
+
 # Compare Rescues (myself) to Rescues (teammates)
 st.write("""
-## Rescues (myself VS teammates)
+## Rescues By Stage
 
 To be implemented - do this overall and per stage
 """)
+
+grouped_data = salmonrun_df.groupby('stage')['my_rescues'].mean().reset_index()
+st.altair_chart(alt.Chart(grouped_data).mark_bar().encode(
+    x=alt.X('stage:N', title='Stage'),
+    y=alt.Y('my_rescues:Q', title='Number of Rescues')
+).properties(
+    width=400,
+    height=400
+))        
+
 
 # Compare Revives (myself) to Revives (teammates)
 st.write("""
-## Revives (myself VS teammates)
+## Revives By Stage
 
 To be implemented - do this overall and per stage
 """)
+
+grouped_data = salmonrun_df.groupby('stage')['my_rescued'].mean().reset_index()
+st.altair_chart(alt.Chart(grouped_data).mark_bar().encode(
+    x=alt.X('stage:N', title='Stage'),
+    y=alt.Y('my_rescued:Q', title='Number of Times I Have Been Rescued')
+).properties(
+    width=400,
+    height=400
+)) 
