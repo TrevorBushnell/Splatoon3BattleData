@@ -4,3 +4,10 @@ selenium
 matplotlib
 numpy
 seaborn
+requests
+json
+beautifulsoup4
+datetime
+pickle
+unidecode
+scikit-learn
