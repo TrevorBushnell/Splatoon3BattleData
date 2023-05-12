@@ -2,3 +2,4 @@ selenium
 matplotlib
 numpy
 seaborn
+requests

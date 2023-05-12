@@ -18,7 +18,7 @@ Driver of the script
 def main():
     download_my_battle_data()
     get_missing_salmon_run_data()
-    get_worldwide_data()
+    # get_worldwide_data()
 
 
 '''
