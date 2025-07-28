@@ -1,0 +1,270 @@
+[
+  {
+    "me": true,
+    "name": "super64guy",
+    "number": "5743",
+    "splashtag_title": "Splatlandian Youth",
+    "uniform": {
+      "key": "orange",
+      "aliases": [
+        "orange_slopsuit",
+        "1"
+      ],
+      "name": {
+        "en_US": "Orange Slopsuit",
+        "ja_JP": "\\u30d0\\u30a4\\u30c8\\u30c4\\u30ca\\u30ae \\u30aa\\u30ec\\u30f3\\u30b8"
+      }
+    },
+    "special": {
+      "key": "tripletornado",
+      "aliases": [],
+      "name": {
+        "en_US": "Triple Inkstrike",
+        "ja_JP": "\\u30c8\\u30ea\\u30d7\\u30eb\\u30c8\\u30eb\\u30cd\\u30fc\\u30c9"
+      }
+    },
+    "weapons": [
+      {
+        "key": "tristringer",
+        "aliases": [
+          "7010",
+          "tri_stringer"
+        ],
+        "name": {
+          "en_US": "Tri-Stringer",
+          "ja_JP": "\\u30c8\\u30e9\\u30a4\\u30b9\\u30c8\\u30ea\\u30f3\\u30ac\\u30fc"
+        }
+      },
+      {
+        "key": "splatspinner",
+        "aliases": [
+          "4000",
+          "mini_splatling"
+        ],
+        "name": {
+          "en_US": "Mini Splatling",
+          "ja_JP": "\\u30b9\\u30d7\\u30e9\\u30b9\\u30d4\\u30ca\\u30fc"
+        }
+      },
+      {
+        "key": "clashblaster",
+        "aliases": [
+          "230",
+          "clash_blaster"
+        ],
+        "name": {
+          "en_US": "Clash Blaster",
+          "ja_JP": "\\u30af\\u30e9\\u30c3\\u30b7\\u30e5\\u30d6\\u30e9\\u30b9\\u30bf\\u30fc"
+        }
+      }
+    ],
+    "golden_eggs": 9,
+    "golden_assist": 0,
+    "power_eggs": 372,
+    "rescue": 3,
+    "rescued": 3,
+    "defeat_boss": 7,
+    "disconnected": false
+  },
+  {
+    "me": false,
+    "name": null,
+    "number": null,
+    "splashtag_title": null,
+    "uniform": {
+      "key": "orange",
+      "aliases": [
+        "orange_slopsuit",
+        "1"
+      ],
+      "name": {
+        "en_US": "Orange Slopsuit",
+        "ja_JP": "\\u30d0\\u30a4\\u30c8\\u30c4\\u30ca\\u30ae \\u30aa\\u30ec\\u30f3\\u30b8"
+      }
+    },
+    "special": {
+      "key": "hopsonar",
+      "aliases": [],
+      "name": {
+        "en_US": "Wave Breaker",
+        "ja_JP": "\\u30db\\u30c3\\u30d7\\u30bd\\u30ca\\u30fc"
+      }
+    },
+    "weapons": [
+      {
+        "key": "clashblaster",
+        "aliases": [
+          "230",
+          "clash_blaster"
+        ],
+        "name": {
+          "en_US": "Clash Blaster",
+          "ja_JP": "\\u30af\\u30e9\\u30c3\\u30b7\\u30e5\\u30d6\\u30e9\\u30b9\\u30bf\\u30fc"
+        }
+      },
+      {
+        "key": "dynamo",
+        "aliases": [
+          "1020",
+          "dynamo_roller"
+        ],
+        "name": {
+          "en_US": "Dynamo Roller",
+          "ja_JP": "\\u30c0\\u30a4\\u30ca\\u30e2\\u30ed\\u30fc\\u30e9\\u30fc"
+        }
+      },
+      {
+        "key": "splatspinner",
+        "aliases": [
+          "4000",
+          "mini_splatling"
+        ],
+        "name": {
+          "en_US": "Mini Splatling",
+          "ja_JP": "\\u30b9\\u30d7\\u30e9\\u30b9\\u30d4\\u30ca\\u30fc"
+        }
+      }
+    ],
+    "golden_eggs": 6,
+    "golden_assist": 0,
+    "power_eggs": 219,
+    "rescue": 0,
+    "rescued": 3,
+    "defeat_boss": 3,
+    "disconnected": false
+  },
+  {
+    "me": false,
+    "name": null,
+    "number": null,
+    "splashtag_title": null,
+    "uniform": {
+      "key": "orange",
+      "aliases": [
+        "orange_slopsuit",
+        "1"
+      ],
+      "name": {
+        "en_US": "Orange Slopsuit",
+        "ja_JP": "\\u30d0\\u30a4\\u30c8\\u30c4\\u30ca\\u30ae \\u30aa\\u30ec\\u30f3\\u30b8"
+      }
+    },
+    "special": {
+      "key": "megaphone51",
+      "aliases": [],
+      "name": {
+        "en_US": "Killer Wail 5.1",
+        "ja_JP": "\\u30e1\\u30ac\\u30db\\u30f3\\u30ec\\u30fc\\u30b6\\u30fc5.1ch"
+      }
+    },
+    "weapons": [
+      {
+        "key": "splatspinner",
+        "aliases": [
+          "4000",
+          "mini_splatling"
+        ],
+        "name": {
+          "en_US": "Mini Splatling",
+          "ja_JP": "\\u30b9\\u30d7\\u30e9\\u30b9\\u30d4\\u30ca\\u30fc"
+        }
+      },
+      {
+        "key": "tristringer",
+        "aliases": [
+          "7010",
+          "tri_stringer"
+        ],
+        "name": {
+          "en_US": "Tri-Stringer",
+          "ja_JP": "\\u30c8\\u30e9\\u30a4\\u30b9\\u30c8\\u30ea\\u30f3\\u30ac\\u30fc"
+        }
+      },
+      {
+        "key": "dynamo",
+        "aliases": [
+          "1020",
+          "dynamo_roller"
+        ],
+        "name": {
+          "en_US": "Dynamo Roller",
+          "ja_JP": "\\u30c0\\u30a4\\u30ca\\u30e2\\u30ed\\u30fc\\u30e9\\u30fc"
+        }
+      }
+    ],
+    "golden_eggs": 8,
+    "golden_assist": 0,
+    "power_eggs": 341,
+    "rescue": 1,
+    "rescued": 1,
+    "defeat_boss": 2,
+    "disconnected": false
+  },
+  {
+    "me": false,
+    "name": null,
+    "number": null,
+    "splashtag_title": null,
+    "uniform": {
+      "key": "orange",
+      "aliases": [
+        "orange_slopsuit",
+        "1"
+      ],
+      "name": {
+        "en_US": "Orange Slopsuit",
+        "ja_JP": "\\u30d0\\u30a4\\u30c8\\u30c4\\u30ca\\u30ae \\u30aa\\u30ec\\u30f3\\u30b8"
+      }
+    },
+    "special": {
+      "key": "kanitank",
+      "aliases": [],
+      "name": {
+        "en_US": "Crab Tank",
+        "ja_JP": "\\u30ab\\u30cb\\u30bf\\u30f3\\u30af"
+      }
+    },
+    "weapons": [
+      {
+        "key": "dynamo",
+        "aliases": [
+          "1020",
+          "dynamo_roller"
+        ],
+        "name": {
+          "en_US": "Dynamo Roller",
+          "ja_JP": "\\u30c0\\u30a4\\u30ca\\u30e2\\u30ed\\u30fc\\u30e9\\u30fc"
+        }
+      },
+      {
+        "key": "clashblaster",
+        "aliases": [
+          "230",
+          "clash_blaster"
+        ],
+        "name": {
+          "en_US": "Clash Blaster",
+          "ja_JP": "\\u30af\\u30e9\\u30c3\\u30b7\\u30e5\\u30d6\\u30e9\\u30b9\\u30bf\\u30fc"
+        }
+      },
+      {
+        "key": "tristringer",
+        "aliases": [
+          "7010",
+          "tri_stringer"
+        ],
+        "name": {
+          "en_US": "Tri-Stringer",
+          "ja_JP": "\\u30c8\\u30e9\\u30a4\\u30b9\\u30c8\\u30ea\\u30f3\\u30ac\\u30fc"
+        }
+      }
+    ],
+    "golden_eggs": 12,
+    "golden_assist": 1,
+    "power_eggs": 316,
+    "rescue": 4,
+    "rescued": 1,
+    "defeat_boss": 3,
+    "disconnected": false
+  }
+]

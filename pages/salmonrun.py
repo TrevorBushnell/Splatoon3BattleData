@@ -4,10 +4,12 @@ import matplotlib.pyplot as plt
 import utils
 import altair as alt
 
-salmonrun_df = pd.read_csv('./initial_scripts/test_salmon.csv', index_col='id')
+salmonrun_df = pd.read_csv('./data/salmon-run-data.csv', index_col='id')
 
 st.write("""
 # My Salmon Run Data
+
+> NOTE: Due to Nintendo shutting down the ability for me to automatically pull my battle data from the game, this data stops after the end of 2023. Thanks for understanding!
 
 Most shooters have two different game modes:
 

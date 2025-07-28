@@ -1,0 +1,67 @@
+[
+    {
+        "tide": {
+            "key": "normal",
+            "name": {
+                "en_US": "Mid Tide",
+                "ja_JP": "\\u666e\\u901a"
+            }
+        },
+        "event": null,
+        "golden_quota": 7,
+        "golden_delivered": 12,
+        "golden_appearances": 12,
+        "special_uses": []
+    },
+    {
+        "tide": {
+            "key": "normal",
+            "name": {
+                "en_US": "Mid Tide",
+                "ja_JP": "\\u666e\\u901a"
+            }
+        },
+        "event": null,
+        "golden_quota": 8,
+        "golden_delivered": 15,
+        "golden_appearances": 15,
+        "special_uses": []
+    },
+    {
+        "tide": {
+            "key": "normal",
+            "name": {
+                "en_US": "Mid Tide",
+                "ja_JP": "\\u666e\\u901a"
+            }
+        },
+        "event": null,
+        "golden_quota": 9,
+        "golden_delivered": 8,
+        "golden_appearances": 12,
+        "special_uses": {
+            "hopsonar": {
+                "special": {
+                    "key": "hopsonar",
+                    "aliases": [],
+                    "name": {
+                        "en_US": "Wave Breaker",
+                        "ja_JP": "\\u30db\\u30c3\\u30d7\\u30bd\\u30ca\\u30fc"
+                    }
+                },
+                "count": 1
+            },
+            "kanitank": {
+                "special": {
+                    "key": "kanitank",
+                    "aliases": [],
+                    "name": {
+                        "en_US": "Crab Tank",
+                        "ja_JP": "\\u30ab\\u30cb\\u30bf\\u30f3\\u30af"
+                    }
+                },
+                "count": 1
+            }
+        }
+    }
+]
